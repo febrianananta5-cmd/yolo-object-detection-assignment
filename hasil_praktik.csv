@@ -1,0 +1,4 @@
+Percobaan,Precision,Recall,mAP50,mAP50-95
+E1_pretrained,0.404,0.3,0.344,0.213
+E2_scratch,0.712,0.031,0.0157,0.00412
+E3_finetuning,0.428,0.32,0.383,0.205
