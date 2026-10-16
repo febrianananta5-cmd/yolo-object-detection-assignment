@@ -1,0 +1,23 @@
+LAPORAN PRAKTIK YOLO
+====================
+
+Dataset: 200 gambar COCO
+Kelas: person, bottle, backpack
+Pembagian: 140 train, 40 validation, 20 test
+
+HASIL VALIDASI
+E1 pretrained: Precision=0.404, Recall=0.300, mAP50=0.344, mAP50-95=0.213
+E2 scratch: Precision=0.712, Recall=0.031, mAP50=0.0157, mAP50-95=0.00412
+E3 fine-tuning: Precision=0.428, Recall=0.320, mAP50=0.383, mAP50-95=0.205
+
+MODEL TERPILIH: E1 pretrained
+Alasan: E1 memiliki mAP50-95 validasi tertinggi, yaitu 0.213.
+
+HASIL TEST E1
+Precision=0.312
+Recall=0.289
+mAP50=0.265
+mAP50-95=0.150
+
+ANALISIS
+E1 unggul berdasarkan mAP50-95 validasi. E2 memiliki performa deteksi rendah karena dilatih dari awal menggunakan dataset yang terbatas. E3 memperoleh mAP50 tertinggi, tetapi mAP50-95-nya sedikit di bawah E1. Pada test set, kelas person terdeteksi lebih baik daripada bottle dan backpack. Jumlah contoh test untuk dua kelas terakhir sangat sedikit, sehingga hasilnya perlu ditafsirkan dengan hati-hati.
